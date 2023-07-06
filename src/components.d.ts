@@ -5,57 +5,92 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Users } from "./model";
+export { Users } from "./model";
 export namespace Components {
+    interface AvatarStack {
+        "size": "avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl";
+        "value": Users[];
+    }
+    interface KekaAvatar {
+        "class": string;
+        "number": number;
+        "shape": string;
+        "size": string;
+        "user": Users;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    }
+    interface ProgressIndicator {
+        "fill": number;
+        "showLabel": boolean;
     }
 }
 declare global {
+    interface HTMLAvatarStackElement extends Components.AvatarStack, HTMLStencilElement {
+    }
+    var HTMLAvatarStackElement: {
+        prototype: HTMLAvatarStackElement;
+        new (): HTMLAvatarStackElement;
+    };
+    interface HTMLKekaAvatarElement extends Components.KekaAvatar, HTMLStencilElement {
+    }
+    var HTMLKekaAvatarElement: {
+        prototype: HTMLKekaAvatarElement;
+        new (): HTMLKekaAvatarElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLProgressIndicatorElement extends Components.ProgressIndicator, HTMLStencilElement {
+    }
+    var HTMLProgressIndicatorElement: {
+        prototype: HTMLProgressIndicatorElement;
+        new (): HTMLProgressIndicatorElement;
+    };
     interface HTMLElementTagNameMap {
+        "avatar-stack": HTMLAvatarStackElement;
+        "keka-avatar": HTMLKekaAvatarElement;
         "my-component": HTMLMyComponentElement;
+        "progress-indicator": HTMLProgressIndicatorElement;
     }
 }
 declare namespace LocalJSX {
+    interface AvatarStack {
+        "size"?: "avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl";
+        "value"?: Users[];
+    }
+    interface KekaAvatar {
+        "class"?: string;
+        "number"?: number;
+        "shape"?: string;
+        "size"?: string;
+        "user"?: Users;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    }
+    interface ProgressIndicator {
+        "fill"?: number;
+        "showLabel"?: boolean;
     }
     interface IntrinsicElements {
+        "avatar-stack": AvatarStack;
+        "keka-avatar": KekaAvatar;
         "my-component": MyComponent;
+        "progress-indicator": ProgressIndicator;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "avatar-stack": LocalJSX.AvatarStack & JSXBase.HTMLAttributes<HTMLAvatarStackElement>;
+            "keka-avatar": LocalJSX.KekaAvatar & JSXBase.HTMLAttributes<HTMLKekaAvatarElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "progress-indicator": LocalJSX.ProgressIndicator & JSXBase.HTMLAttributes<HTMLProgressIndicatorElement>;
         }
     }
 }
