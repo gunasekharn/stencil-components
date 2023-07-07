@@ -1,3 +1,172 @@
 :host {
-  display: block;
+  display: inline-block;
+  position: relative;
+
 }
+
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 10;
+  min-width: 320px;
+  padding: 0.5rem 0;
+  margin: 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+
+.align-bottom-start {
+  left: 0%;
+}
+
+.align-bottom-end {
+  right: 0%;
+}
+
+.align-left-start {
+  right: 100%;
+  top: 0%;
+}
+
+.align-left-end {
+  right: 100%;
+  bottom: 0%;
+}
+
+.align-right-start {
+  left: 100%;
+  top: 0%;
+}
+
+.align-right-end {
+  left: 100%;
+  bottom: 0%;
+}
+
+.align-top-start {
+  left: 0%;
+  bottom: 100%;
+}
+
+.align-top-end {
+  right: 0%;
+  bottom: 100%;
+}
+
+.placeholder-message {
+  align-self: center;
+  padding: 0 10px;
+  color: grey;
+}
+
+.selected-items {
+  align-self: center;
+  padding: 0 10px;
+}
+
+
+.dropdown-container {
+  width: 320px;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.dropdown-field {
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.dropdown-list {
+  background-color: #9e77ed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.input-container,
+.input-container-filled {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.input-container {
+  border: 2px grey solid;
+}
+
+.input-container-filled {
+  border: 2px #9e77ed solid;
+}
+
+.input-control {
+  flex-grow: 1;
+}
+
+.input-control input {
+  width: 95%;
+  height: 80%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+.chips-container {
+  width: auto;
+}
+
+.chip-wrapper {
+  background-color: #f2f4f7;
+  border-radius: 16px;
+  padding: 4px 6px;
+  margin: 0 2px;
+  min-width: 70px;
+  height: 20px;
+  column-gap: 4px;
+}
+
+
+.font-smaller {
+  font-size: smaller;
+}
+
+.selected-item-wrapper {
+  padding: 4px 6px;
+  column-gap: 4px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.help-text {
+  text-align: center;
+}
+
+.remove-chip {
+  cursor: pointer;
+}
+
+
+
+

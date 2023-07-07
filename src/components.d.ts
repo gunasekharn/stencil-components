@@ -7,8 +7,22 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface KekaDropdown {
+        "alignment": 'start' | 'end';
+        "avatars": boolean;
+        "label": string;
+        "multiple": boolean;
+        "position": 'left' | 'top' | 'right' | 'bottom';
+        "type": 'select' | 'input' | 'list';
     }
     interface KekaDropdownItem {
+        "avatar": string;
+        "checked": boolean;
+        "itemClicked": () => Promise<void>;
+        "label": string;
+        "multiple": boolean;
+        "parentRef": string;
+        "showAvatar": boolean;
+        "type": 'select' | 'input' | 'list';
     }
     interface KekaGlobalHeader {
     }
@@ -39,6 +53,14 @@ export namespace Components {
          */
         "middle": string;
     }
+} 
+export interface KekaDropdownCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKekaDropdownElement;
+}
+export interface KekaDropdownItemCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKekaDropdownItemElement;
 }
 export interface KekaTabBarCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -92,8 +114,23 @@ declare global {
 }
 declare namespace LocalJSX {
     interface KekaDropdown {
+        "alignment"?: 'start' | 'end';
+        "avatars"?: boolean;
+        "label"?: string;
+        "multiple"?: boolean;
+        "onCheckboxAction"?: (event: KekaDropdownCustomEvent<{ label: string; avatar: string; checked: boolean }>) => void;
+        "position"?: 'left' | 'top' | 'right' | 'bottom';
+        "type"?: 'select' | 'input' | 'list';
     }
     interface KekaDropdownItem {
+        "avatar"?: string;
+        "checked"?: boolean;
+        "label"?: string;
+        "multiple"?: boolean;
+        "onItemClick"?: (event: KekaDropdownItemCustomEvent<{ label: string; avatar: string; checked: boolean; parentRef: string }>) => void;
+        "parentRef"?: string;
+        "showAvatar"?: boolean;
+        "type"?: 'select' | 'input' | 'list';
     }
     interface KekaGlobalHeader {
     }
