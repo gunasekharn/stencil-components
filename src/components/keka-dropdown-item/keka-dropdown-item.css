@@ -1,3 +1,31 @@
 :host {
   display: block;
+  padding: 2px;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 4px;
+  column-gap: 4px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #fcfaff;
+}
+
+.selected {
+  background-color: #f9f5ff;
+}
+
+
+
+.dropdown-item-label {
+  flex-grow: 1;
+}
+
+.avatar {
+  border-radius: 25px;
 }
