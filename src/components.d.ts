@@ -28,6 +28,10 @@ export namespace Components {
     }
     interface MyComponent {
     }
+    interface ProfessionalAvatar {
+        "data": Users;
+        "size": string;
+    }
     interface ProgressIndicator {
         "fill": number;
         "showLabel": boolean;
@@ -58,6 +62,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLProfessionalAvatarElement extends Components.ProfessionalAvatar, HTMLStencilElement {
+    }
+    var HTMLProfessionalAvatarElement: {
+        prototype: HTMLProfessionalAvatarElement;
+        new (): HTMLProfessionalAvatarElement;
+    };
     interface HTMLProgressIndicatorElement extends Components.ProgressIndicator, HTMLStencilElement {
     }
     var HTMLProgressIndicatorElement: {
@@ -69,6 +79,7 @@ declare global {
         "keka-avatar": HTMLKekaAvatarElement;
         "keka-tooltip": HTMLKekaTooltipElement;
         "my-component": HTMLMyComponentElement;
+        "professional-avatar": HTMLProfessionalAvatarElement;
         "progress-indicator": HTMLProgressIndicatorElement;
     }
 }
@@ -93,6 +104,10 @@ declare namespace LocalJSX {
     }
     interface MyComponent {
     }
+    interface ProfessionalAvatar {
+        "data"?: Users;
+        "size"?: string;
+    }
     interface ProgressIndicator {
         "fill"?: number;
         "showLabel"?: boolean;
@@ -102,6 +117,7 @@ declare namespace LocalJSX {
         "keka-avatar": KekaAvatar;
         "keka-tooltip": KekaTooltip;
         "my-component": MyComponent;
+        "professional-avatar": ProfessionalAvatar;
         "progress-indicator": ProgressIndicator;
     }
 }
@@ -113,6 +129,7 @@ declare module "@stencil/core" {
             "keka-avatar": LocalJSX.KekaAvatar & JSXBase.HTMLAttributes<HTMLKekaAvatarElement>;
             "keka-tooltip": LocalJSX.KekaTooltip & JSXBase.HTMLAttributes<HTMLKekaTooltipElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "professional-avatar": LocalJSX.ProfessionalAvatar & JSXBase.HTMLAttributes<HTMLProfessionalAvatarElement>;
             "progress-indicator": LocalJSX.ProgressIndicator & JSXBase.HTMLAttributes<HTMLProgressIndicatorElement>;
         }
     }
