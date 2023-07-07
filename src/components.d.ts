@@ -6,6 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface KekaButtonComponent {
+        "disabled": boolean;
+        "iconPlacement": 'left' | 'right' | '';
+        "size": 'btn-small' | '';
+        "type": 'submit' | 'reset';
+        "variant": 'btn-violet-primary' | 'btn-violet-secondary' | 'btn-violet-tertiary' | 'btn-link' | 'btn-danger-primary' | 'btn-danger-secondary' | 'btn-danger-tertiary' | 'btn-link-danger';
+    }
     interface MyComponent {
         /**
           * The first name
@@ -21,7 +28,17 @@ export namespace Components {
         "middle": string;
     }
 }
+export interface KekaButtonComponentCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKekaButtonComponentElement;
+}
 declare global {
+    interface HTMLKekaButtonComponentElement extends Components.KekaButtonComponent, HTMLStencilElement {
+    }
+    var HTMLKekaButtonComponentElement: {
+        prototype: HTMLKekaButtonComponentElement;
+        new (): HTMLKekaButtonComponentElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +46,19 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "keka-button-component": HTMLKekaButtonComponentElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface KekaButtonComponent {
+        "disabled"?: boolean;
+        "iconPlacement"?: 'left' | 'right' | '';
+        "onButtonClicked"?: (event: KekaButtonComponentCustomEvent<void>) => void;
+        "size"?: 'btn-small' | '';
+        "type"?: 'submit' | 'reset';
+        "variant"?: 'btn-violet-primary' | 'btn-violet-secondary' | 'btn-violet-tertiary' | 'btn-link' | 'btn-danger-primary' | 'btn-danger-secondary' | 'btn-danger-tertiary' | 'btn-link-danger';
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +74,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "keka-button-component": KekaButtonComponent;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +82,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "keka-button-component": LocalJSX.KekaButtonComponent & JSXBase.HTMLAttributes<HTMLKekaButtonComponentElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
