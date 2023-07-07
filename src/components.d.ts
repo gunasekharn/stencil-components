@@ -53,7 +53,7 @@ export namespace Components {
          */
         "middle": string;
     }
-} 
+}
 export interface KekaDropdownCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLKekaDropdownElement;
