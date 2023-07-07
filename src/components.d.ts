@@ -6,22 +6,31 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface KekaCheckbox {
+        "checked": boolean;
+        "disabled": boolean;
+        "id": string;
+        "indeterminate": boolean;
+        "mainText": string;
+        "name": string;
+        "required": boolean;
+        "subText": string;
+        "value": string;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
 }
+export interface KekaCheckboxCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKekaCheckboxElement;
+}
 declare global {
+    interface HTMLKekaCheckboxElement extends Components.KekaCheckbox, HTMLStencilElement {
+    }
+    var HTMLKekaCheckboxElement: {
+        prototype: HTMLKekaCheckboxElement;
+        new (): HTMLKekaCheckboxElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,25 +38,30 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "keka-checkbox": HTMLKekaCheckboxElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface KekaCheckbox {
+        "checked"?: boolean;
+        "disabled"?: boolean;
+        "id"?: string;
+        "indeterminate"?: boolean;
+        "mainText"?: string;
+        "name"?: string;
+        "onBlur"?: (event: KekaCheckboxCustomEvent<void>) => void;
+        "onChange"?: (event: KekaCheckboxCustomEvent<boolean>) => void;
+        "onClick"?: (event: KekaCheckboxCustomEvent<void>) => void;
+        "onFocus"?: (event: KekaCheckboxCustomEvent<void>) => void;
+        "required"?: boolean;
+        "subText"?: string;
+        "value"?: string;
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface IntrinsicElements {
+        "keka-checkbox": KekaCheckbox;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +69,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "keka-checkbox": LocalJSX.KekaCheckbox & JSXBase.HTMLAttributes<HTMLKekaCheckboxElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
