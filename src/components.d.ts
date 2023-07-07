@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { Users } from "./model";
+export { Users } from "./model";
 export namespace Components {
     interface KekaDropdown {
         "alignment": 'start' | 'end';
@@ -38,20 +40,33 @@ export namespace Components {
         "prefixLabelIcon": string;
         "suffixLabelIcon": string;
         "type": string;
+    interface AvatarStack {
+        "size": "avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl";
+        "value": Users[];
+    }
+    interface KekaAvatar {
+        "class": string;
+        "number": number;
+        "shape": string;
+        "size": string;
+        "user": Users;
+    }
+    interface KekaTooltip {
+        "arrow": boolean;
+        "left": number;
+        "position": "top"|"right"|"bottom"|"left";
+        "text": string;
+        "theme": string;
     }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    }
+    interface ProfessionalAvatar {
+        "data": Users;
+        "size": string;
+    }
+    interface ProgressIndicator {
+        "fill": number;
+        "showLabel": boolean;
     }
 } 
 export interface KekaDropdownCustomEvent<T> extends CustomEvent<T> {
@@ -96,6 +111,23 @@ declare global {
     var HTMLKekaTabItemElement: {
         prototype: HTMLKekaTabItemElement;
         new (): HTMLKekaTabItemElement;
+    interface HTMLAvatarStackElement extends Components.AvatarStack, HTMLStencilElement {
+    }
+    var HTMLAvatarStackElement: {
+        prototype: HTMLAvatarStackElement;
+        new (): HTMLAvatarStackElement;
+    };
+    interface HTMLKekaAvatarElement extends Components.KekaAvatar, HTMLStencilElement {
+    }
+    var HTMLKekaAvatarElement: {
+        prototype: HTMLKekaAvatarElement;
+        new (): HTMLKekaAvatarElement;
+    };
+    interface HTMLKekaTooltipElement extends Components.KekaTooltip, HTMLStencilElement {
+    }
+    var HTMLKekaTooltipElement: {
+        prototype: HTMLKekaTooltipElement;
+        new (): HTMLKekaTooltipElement;
     };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
@@ -103,16 +135,37 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLProfessionalAvatarElement extends Components.ProfessionalAvatar, HTMLStencilElement {
+    }
+    var HTMLProfessionalAvatarElement: {
+        prototype: HTMLProfessionalAvatarElement;
+        new (): HTMLProfessionalAvatarElement;
+    };
+    interface HTMLProgressIndicatorElement extends Components.ProgressIndicator, HTMLStencilElement {
+    }
+    var HTMLProgressIndicatorElement: {
+        prototype: HTMLProgressIndicatorElement;
+        new (): HTMLProgressIndicatorElement;
+    };
     interface HTMLElementTagNameMap {
+
         "keka-dropdown": HTMLKekaDropdownElement;
         "keka-dropdown-item": HTMLKekaDropdownItemElement;
         "keka-global-header": HTMLKekaGlobalHeaderElement;
         "keka-tab-bar": HTMLKekaTabBarElement;
         "keka-tab-item": HTMLKekaTabItemElement;
+
+        "avatar-stack": HTMLAvatarStackElement;
+        "keka-avatar": HTMLKekaAvatarElement;
+        "keka-tooltip": HTMLKekaTooltipElement;
+
         "my-component": HTMLMyComponentElement;
+        "professional-avatar": HTMLProfessionalAvatarElement;
+        "progress-indicator": HTMLProgressIndicatorElement;
     }
 }
 declare namespace LocalJSX {
+
     interface KekaDropdown {
         "alignment"?: 'start' | 'end';
         "avatars"?: boolean;
@@ -146,40 +199,65 @@ declare namespace LocalJSX {
         "prefixLabelIcon"?: string;
         "suffixLabelIcon"?: string;
         "type"?: string;
+    interface AvatarStack {
+        "size"?: "avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl";
+        "value"?: Users[];
+    }
+    interface KekaAvatar {
+        "class"?: string;
+        "number"?: number;
+        "shape"?: string;
+        "size"?: string;
+        "user"?: Users;
+    }
+    interface KekaTooltip {
+        "arrow"?: boolean;
+        "left"?: number;
+        "position"?: "top"|"right"|"bottom"|"left";
+        "text"?: string;
+        "theme"?: string;
     }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    }
+    interface ProfessionalAvatar {
+        "data"?: Users;
+        "size"?: string;
+    }
+    interface ProgressIndicator {
+        "fill"?: number;
+        "showLabel"?: boolean;
     }
     interface IntrinsicElements {
+
         "keka-dropdown": KekaDropdown;
         "keka-dropdown-item": KekaDropdownItem;
         "keka-global-header": KekaGlobalHeader;
         "keka-tab-bar": KekaTabBar;
         "keka-tab-item": KekaTabItem;
+        "avatar-stack": AvatarStack;
+        "keka-avatar": KekaAvatar;
+        "keka-tooltip": KekaTooltip;
         "my-component": MyComponent;
+        "professional-avatar": ProfessionalAvatar;
+        "progress-indicator": ProgressIndicator;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+
             "keka-dropdown": LocalJSX.KekaDropdown & JSXBase.HTMLAttributes<HTMLKekaDropdownElement>;
             "keka-dropdown-item": LocalJSX.KekaDropdownItem & JSXBase.HTMLAttributes<HTMLKekaDropdownItemElement>;
             "keka-global-header": LocalJSX.KekaGlobalHeader & JSXBase.HTMLAttributes<HTMLKekaGlobalHeaderElement>;
             "keka-tab-bar": LocalJSX.KekaTabBar & JSXBase.HTMLAttributes<HTMLKekaTabBarElement>;
             "keka-tab-item": LocalJSX.KekaTabItem & JSXBase.HTMLAttributes<HTMLKekaTabItemElement>;
+            "avatar-stack": LocalJSX.AvatarStack & JSXBase.HTMLAttributes<HTMLAvatarStackElement>;
+            "keka-avatar": LocalJSX.KekaAvatar & JSXBase.HTMLAttributes<HTMLKekaAvatarElement>;
+            "keka-tooltip": LocalJSX.KekaTooltip & JSXBase.HTMLAttributes<HTMLKekaTooltipElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "professional-avatar": LocalJSX.ProfessionalAvatar & JSXBase.HTMLAttributes<HTMLProfessionalAvatarElement>;
+            "progress-indicator": LocalJSX.ProgressIndicator & JSXBase.HTMLAttributes<HTMLProgressIndicatorElement>;
         }
     }
 }
