@@ -155,6 +155,37 @@ export class MyComponent {
               <keka-avatar size="avatar-sm " shape="squared" user={this.user3}></keka-avatar>
               <keka-avatar size="avatar-xs " shape="squared" user={this.user3}></keka-avatar>
             </div>
+
+            <div class={"d-flex"}>
+
+              <div class={" m-1"}>
+                <progress-indicator fill={0}  ></progress-indicator>
+                <progress-indicator fill={10} ></progress-indicator>
+                <progress-indicator fill={20} ></progress-indicator>
+                <progress-indicator fill={30} ></progress-indicator>
+                <progress-indicator fill={40} ></progress-indicator>
+                <progress-indicator fill={50} ></progress-indicator>
+                <progress-indicator fill={60} ></progress-indicator>
+                <progress-indicator fill={70} ></progress-indicator>
+                <progress-indicator fill={80} ></progress-indicator>
+                <progress-indicator fill={90} ></progress-indicator>
+                <progress-indicator fill={100} ></progress-indicator>
+              </div>
+              <div class={" m-1"}>
+                <progress-indicator fill={0}  showLabel></progress-indicator>
+                <progress-indicator fill={10} showLabel ></progress-indicator>
+                <progress-indicator fill={20} showLabel></progress-indicator>
+                <progress-indicator fill={30} showLabel></progress-indicator>
+                <progress-indicator fill={40} showLabel></progress-indicator>
+                <progress-indicator fill={50} showLabel></progress-indicator>
+                <progress-indicator fill={60} showLabel></progress-indicator>
+                <progress-indicator fill={70} showLabel></progress-indicator>
+                <progress-indicator fill={80} showLabel></progress-indicator>
+                <progress-indicator fill={90} showLabel></progress-indicator>
+                <progress-indicator fill={100} showLabel></progress-indicator>
+              </div>
+            </div>
+            
       </div>;
   }
 }

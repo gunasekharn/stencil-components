@@ -19,6 +19,13 @@ export namespace Components {
         "size": string;
         "user": Users;
     }
+    interface KekaTooltip {
+        "arrow": boolean;
+        "left": number;
+        "position": "top"|"right"|"bottom"|"left";
+        "text": string;
+        "theme": string;
+    }
     interface MyComponent {
     }
     interface ProgressIndicator {
@@ -39,6 +46,12 @@ declare global {
         prototype: HTMLKekaAvatarElement;
         new (): HTMLKekaAvatarElement;
     };
+    interface HTMLKekaTooltipElement extends Components.KekaTooltip, HTMLStencilElement {
+    }
+    var HTMLKekaTooltipElement: {
+        prototype: HTMLKekaTooltipElement;
+        new (): HTMLKekaTooltipElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -54,6 +67,7 @@ declare global {
     interface HTMLElementTagNameMap {
         "avatar-stack": HTMLAvatarStackElement;
         "keka-avatar": HTMLKekaAvatarElement;
+        "keka-tooltip": HTMLKekaTooltipElement;
         "my-component": HTMLMyComponentElement;
         "progress-indicator": HTMLProgressIndicatorElement;
     }
@@ -70,6 +84,13 @@ declare namespace LocalJSX {
         "size"?: string;
         "user"?: Users;
     }
+    interface KekaTooltip {
+        "arrow"?: boolean;
+        "left"?: number;
+        "position"?: "top"|"right"|"bottom"|"left";
+        "text"?: string;
+        "theme"?: string;
+    }
     interface MyComponent {
     }
     interface ProgressIndicator {
@@ -79,6 +100,7 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "avatar-stack": AvatarStack;
         "keka-avatar": KekaAvatar;
+        "keka-tooltip": KekaTooltip;
         "my-component": MyComponent;
         "progress-indicator": ProgressIndicator;
     }
@@ -89,6 +111,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "avatar-stack": LocalJSX.AvatarStack & JSXBase.HTMLAttributes<HTMLAvatarStackElement>;
             "keka-avatar": LocalJSX.KekaAvatar & JSXBase.HTMLAttributes<HTMLKekaAvatarElement>;
+            "keka-tooltip": LocalJSX.KekaTooltip & JSXBase.HTMLAttributes<HTMLKekaTooltipElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "progress-indicator": LocalJSX.ProgressIndicator & JSXBase.HTMLAttributes<HTMLProgressIndicatorElement>;
         }
