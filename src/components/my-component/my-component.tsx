@@ -1,5 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -7,26 +6,27 @@ import { format } from '../../utils/utils';
   shadow: true,
 })
 export class MyComponent {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
-
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
-
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
+ 
+  check=()=> {
+    console.log("check");
+  }
+  change=()=> {
+    console.log("change");
+  }
+  focus=()=> {
+    console.log("focus");
+  }
+  blur=()=> {
+    console.log("blur");
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    return(
+    <div class="container">
+      <keka-checkbox onClick={this.check} onChange={this.change} onFocus={this.focus} mainText='label'  onBlur={this.blur} ></keka-checkbox>
+      <keka-checkbox disabled checked mainText='label' subText='subtext'></keka-checkbox>
+      <keka-checkbox indeterminate></keka-checkbox>
+    </div>
+    )
   }
 }
