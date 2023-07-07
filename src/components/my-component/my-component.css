@@ -1,3 +1,23 @@
+:root{
+  --var1:#c69e76;
+}
 :host {
   display: block;
+  background-color: var(--var1);
+  padding: 16px;
+}
+
+.container {
+  border: 1px solid black;
+  margin: 16px;
+  padding: 8px;
+}
+
+.d-flex{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.m-1{
+  margin:10px 20px;
 }
