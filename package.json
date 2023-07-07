@@ -35,5 +35,10 @@
     "jest-cli": "^27.5.1",
     "puppeteer": "^20.7.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ionic-team/stencil-component-starter/issues"
+  },
+  "homepage": "https://github.com/ionic-team/stencil-component-starter#readme",
+  "author": "Nikhil"
 }
