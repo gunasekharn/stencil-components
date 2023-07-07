@@ -38,9 +38,6 @@ export class KekaDropdownItem {
     this.onItemClick.emit({ label: this.label, avatar: this.avatar, checked: this.checked, parentRef: this.parentRef });
   }
 
-  componentWillLoad() {
-    console.log('host el: ', this.hostElement);
-  }
 
   componentDidLoad() {
     if (this.multiple) {
@@ -57,7 +54,8 @@ export class KekaDropdownItem {
             <input type="checkbox" checked={this.checked} />
           </div>
         )}
-        {this.avatar && this.showAvatar && (
+        {this.avatar !== 
+        '' && this.showAvatar && (
           <div>
             <img class={`avatar`} width={`16`} src={this.avatar} alt="A" />
           </div>

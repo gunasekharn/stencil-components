@@ -139,12 +139,12 @@ export class KekaDropdown {
   }
 
   render() {
-    const listDropdownAlignment:string = this.type === "list" ? `align-${this.position}-${this.alignment}`: '' ;
+    const listDropdownAlignment: string = this.type === 'list' ? `align-${this.position}-${this.alignment}` : '';
 
     return (
       <div class={this.type !== 'list' ? `dropdown-container` : 'dropdown-list-container'}>
         {this.type === 'list' && (
-          <div class={`dropdown-list`} onClick={() => this.toggleDropdown()}>
+          <div id="inputContainer" aria-haspopup="true" aria-expanded="false" class={`dropdown-list`} onClick={() => this.toggleDropdown()}>
             {this.label}
           </div>
         )}
@@ -219,7 +219,7 @@ export class KekaDropdown {
           </div>
         )}
         {this.isOpen && (
-          <ul class={`dropdown-menu ${listDropdownAlignment}`} aria-labelledby="inputContainer" role="listbox">
+          <ul class={`dropdown-menu ${listDropdownAlignment} ${this.filteredItems.length > 7 ? 'scroll-y' : ''}`} aria-labelledby="inputContainer" role="listbox">
             {this.filteredItems.length ? (
               this.filteredItems.map(item => {
                 return (
