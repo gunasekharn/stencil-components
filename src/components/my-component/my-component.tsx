@@ -75,6 +75,9 @@ export class MyComponent {
 
 
   render() {
+
+    return <div>Hello, World! I'm {this.getText()} from Abhishek branch</div>;
+
     return <div>
       <div class="d-flex">
               <professional-avatar size="avatar-xxxl " data={this.user1}></professional-avatar>
@@ -187,5 +190,6 @@ export class MyComponent {
             </div>
             
       </div>;
+
   }
 }
