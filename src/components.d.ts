@@ -68,7 +68,7 @@ export namespace Components {
         "fill": number;
         "showLabel": boolean;
     }
-} 
+}
 export interface KekaDropdownCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLKekaDropdownElement;
