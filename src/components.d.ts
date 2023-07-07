@@ -13,8 +13,17 @@ export namespace Components {
     interface KekaGlobalHeader {
     }
     interface KekaTabBar {
+        "currentTab": () => Promise<number>;
+        "type": 'atom' | 'switch';
     }
     interface KekaTabItem {
+        "disabled": boolean;
+        "header": string;
+        "navigate": string;
+        "open": boolean;
+        "prefixLabelIcon": string;
+        "suffixLabelIcon": string;
+        "type": string;
     }
     interface MyComponent {
         /**
@@ -30,6 +39,10 @@ export namespace Components {
          */
         "middle": string;
     }
+}
+export interface KekaTabBarCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLKekaTabBarElement;
 }
 declare global {
     interface HTMLKekaDropdownElement extends Components.KekaDropdown, HTMLStencilElement {
@@ -85,8 +98,17 @@ declare namespace LocalJSX {
     interface KekaGlobalHeader {
     }
     interface KekaTabBar {
+        "onTab"?: (event: KekaTabBarCustomEvent<{ index: number }>) => void;
+        "type"?: 'atom' | 'switch';
     }
     interface KekaTabItem {
+        "disabled"?: boolean;
+        "header"?: string;
+        "navigate"?: string;
+        "open"?: boolean;
+        "prefixLabelIcon"?: string;
+        "suffixLabelIcon"?: string;
+        "type"?: string;
     }
     interface MyComponent {
         /**

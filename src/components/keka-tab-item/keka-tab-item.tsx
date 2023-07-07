@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'keka-tab-item',
@@ -6,13 +6,25 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class KekaTabItem {
+  @Prop() header: string = 'Tab name';
+
+  @Prop() navigate: string;
+
+  @Prop() disabled: boolean = false;
+
+  @Prop() open: boolean;
+
+  @Prop() type: string = 'white';
+
+  @Prop() prefixLabelIcon: string;
+
+  @Prop() suffixLabelIcon: string;
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <div role="tabpanel" hidden={!this.open} class={`d-flex justify-content-center align-items-center`}>
+        <slot />
+      </div>
     );
   }
-
 }
