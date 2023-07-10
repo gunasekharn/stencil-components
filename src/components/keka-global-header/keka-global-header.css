@@ -1,0 +1,47 @@
+:host {
+  display: block;
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.jusftify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+
+.global-actions-wrapper {
+  justify-content: flex-end;
+  column-gap: 8px;
+}
+
+.global-header-container {
+  height: 50px;
+  justify-content: space-between;
+  border: 2px #ccc solid;
+}
+
+.breadcrumb-wrapper {
+  margin-left: 10px;
+}
+
+
+::slotted([slot="avatar"]) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 36px;
+  width: 36px;
+  border-radius: 25px;
+  border: 2px #ccc solid;
+}
