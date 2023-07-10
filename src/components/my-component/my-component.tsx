@@ -12,49 +12,49 @@ export class MyComponent {
     {
         name: "vijay simha reddy kamidi",
         email:"vijay@gmail.com",
-        profile:'././assets/profilePicture.png',
+        profile:'../../assets/profilePicture.png',
         designation:"designer"
     },
     {
         name: "vijay simha ",
         email:"vijay@gmail.com",
-        profile:'././assets/profilePicture.png',
+        profile:'../../assets/profilePicture.png',
         designation:"product engineer"
     },
     {
         name: "vijay simha reddy ",
         email:"vijay@gmail.com",
-        profile:"././assets/profilePicture.png",
+        profile:"../../assets/profilePicture.png",
         designation:"frontend developer"
     },
     {
         name: "vijay  ",
         email:"vijay@gmail.com",
-        profile:"././assets/profilePicture.png",
+        profile:"../../assets/profilePicture.png",
         designation:"backend developer"
     },
     {
-        name: "nagateja vijay simha reddy ",
+        name: "ajay ",
         email:"vijay@gmail.com",
-        profile:"././assets/profilePicture.png",
+        profile:"../../assets/profilePicture.png",
         designation:"app developer"
     },
     {
-        name: "vijay simha reddy  isetti",
+        name: "sanjay",
         email:"vijay@gmail.com",
-        profile:"././assets/profilePicture.png",
+        profile:"../../assets/profilePicture.png",
         designation:"designer"
     },
     {
         name: "nagateja vijay arisetti",
         email:"vijay@gmail.com",
-        profile:"././assets/profilePicture.png",
+        profile:"../../assets/profilePicture.png",
         designation:"head technology"
     },
     {
       name: "vijay simha kingsman",
       email:"vijay@gmail.com",
-      profile:'././assets/profilePicture.png',
+      profile:'../../assets/profilePicture.png',
       designation:"product engineer"
   },
   // {
@@ -146,7 +146,7 @@ export class MyComponent {
   user1:Users={
     name: "nagateja pillar",
     email:"vijay@gmail.com",
-    profile:"././assets/profilePicture.png",
+    profile:"../../assets/profilePicture.png",
     designation:"frontend dev"
   };
   user2:Users={
