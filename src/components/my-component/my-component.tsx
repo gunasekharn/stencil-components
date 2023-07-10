@@ -1,5 +1,5 @@
 import { Component,  h } from '@stencil/core';
-// import { format } from '../../utils/utils';
+
 import { Users } from '../../model';
 
 @Component({
