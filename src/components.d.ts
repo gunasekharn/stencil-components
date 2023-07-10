@@ -13,8 +13,8 @@ export namespace Components {
         "value": Users[];
     }
     interface KekaAvatar {
+        "allUsers": Users[];
         "class": string;
-        "number": number;
         "shape": string;
         "size": string;
         "user": Users;
@@ -189,8 +189,8 @@ declare namespace LocalJSX {
         "value"?: Users[];
     }
     interface KekaAvatar {
+        "allUsers"?: Users[];
         "class"?: string;
-        "number"?: number;
         "shape"?: string;
         "size"?: string;
         "user"?: Users;
