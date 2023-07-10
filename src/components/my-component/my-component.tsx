@@ -183,8 +183,8 @@ export class MyComponent {
               <avatar-stack  size="avatar-sm" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-md" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-lg" value={this.data}></avatar-stack>
-              <avatar-stack  size="avatar-xl" value={this.data}></avatar-stack>5
-              <avatar-stack  size="avatar-xxl" value={this.data}></avatar-stack> */}
+              <avatar-stack  size="avatar-xl" value={this.data}></avatar-stack> */}
+              <avatar-stack  size="avatar-xxl" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-xxxl" value={this.data}></avatar-stack>
             </div>
 
@@ -278,8 +278,13 @@ export class MyComponent {
               </div>
             </div>
 
-            <div>
-
+            <div class={"d-flex"}>
+              <keka-input ></keka-input>
+              <keka-input size="sm" ></keka-input>              
+            </div>
+            <div class={"d-flex"}>
+              <keka-input variant="secondary"></keka-input>
+              <keka-input size="sm" variant="secondary"></keka-input>
             </div>
             
       </div>;
