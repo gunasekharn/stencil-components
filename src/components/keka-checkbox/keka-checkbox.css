@@ -5,18 +5,6 @@
   cursor: pointer;
 }
 
-.container:focus input[type="checkbox"]:not(:disabled){
-  border-color: #E9D7FE;
-  box-shadow: 0px 0px 0px 3px #F4EBFF;
-}
-
-.container:hover input[type="checkbox"]:not(:disabled){
-  border-color: #7F56D9;   
-}
-
-.checkbox{
-  margin: 0px;
-}
 .content{
   margin-left:5px
 }
@@ -29,13 +17,26 @@
   text-transform: capitalize;
 }
 .sub-text{
-margin:0px;
-font-size: 10px;
-color:#667085;
-line-height: 16px;
-text-transform: capitalize;
+  margin:0px;
+  font-size: 10px;
+  color:#667085;
+  line-height: 16px;
+  text-transform: capitalize;
 }
 
+.container:focus input[type="checkbox"]:not(:disabled):not(.checked):not(.indeterminate){
+  border-color: #E9D7FE;
+  box-shadow: 0px 0px 0px 3px #F4EBFF;
+}
+
+.container:focus input[type="checkbox"]:not(:disabled){
+  box-shadow: 0px 0px 0px 3px #F4EBFF;
+}
+
+
+.container:hover input[type="checkbox"]:not(:disabled){
+  border-color: #7F56D9;   
+}
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
@@ -48,37 +49,57 @@ input[type="checkbox"] {
   cursor: pointer;
   position: relative;
 }
-input[type="checkbox"]:checked {
+input[type="checkbox"].checked {
   background-color: #7F56D9;
   border-color: #7F56D9;
 }
 
-input[type="checkbox"]:disabled {
+input[type="checkbox"].disabled {
   background-color: #F2F4F7;
   border-color: #D0D5DD;
 }
 
-input[type="checkbox"]:not(:disabled):hover {
+input[type="checkbox"].indeterminate {
+  background-color: #7F56D9;
   border-color: #7F56D9;
 }
 
-input[type="checkbox"]:not(:checked):focus {
+input[type="checkbox"]:not(.disabled):not(.checked):hover {
+  border-color: #7F56D9;
+}
+
+input[type="checkbox"]:not(.checked):not(.indeterminate):focus {
   border-color: #E9D7FE;
   box-shadow: 0px 0px 0px 3px #F4EBFF;
 }
 
-input[type="checkbox"]:checked::after {
+input[type="checkbox"].checked:not(.indeterminate)::after {
   content: "\2713";
   position: absolute;
   left: 4px;
   color: white;
 }
 
-
-input[type="checkbox"]:checked:focus {
+input[type="checkbox"].indeterminate::after {
+  content:  "";
+  position: absolute;
+  color: #7F56D9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12.5px;
+  height: 0.96px;
+  background-color: white;
+  border-radius: 2px;
+ 
+}
+input[type="checkbox"].checked:focus {
+  box-shadow: 0px 0px 0px 3px #F4EBFF;
+}
+input[type="checkbox"].indeterminate:focus {
   box-shadow: 0px 0px 0px 3px #F4EBFF;
 }
 
-input[type="checkbox"]:checked:disabled::after{
+input[type="checkbox"].checked.disabled::after{
   color:#D0D5DD;
 }
