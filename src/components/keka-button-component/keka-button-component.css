@@ -149,18 +149,3 @@
 .reverse-flex{
   flex-direction: row-reverse;
 }
-
-/* .btn:disabled:hover::after{
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 125%;
-  left: 150%;
-  transform: translateX(-50%);
-  width: max-content;
-  background-color: #000;
-  color: #fff;
-  padding: 3px;
-  border-radius: var(--default-border-radius);
-  font-size: var(--baseFontSize);
-  opacity: 1;
-} */

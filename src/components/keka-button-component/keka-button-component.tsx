@@ -21,10 +21,8 @@ export class KekaButtonComponent {
   render() {
     return (
       <div>
-        <button 
-        type={this.type} class={"btn " + this.variant + " " + this.size + 
-        (this.iconPlacement == 'right' ? ' reverse-flex' : '')}
-          // data-tooltip={this.tooltipinfo ? this.tooltipinfo : ""}
+        <button
+          type={this.type} class={`btn ${this.variant} ${this.size} ${this.iconPlacement === 'right' ? 'reverse-flex' : ''}`}
           disabled={this.disabled}
           onClick={() => this.onClicked()} >
           {this.iconPlacement ? <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ki ki-add" viewBox="0 0 16 16">
