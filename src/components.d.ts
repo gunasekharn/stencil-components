@@ -14,6 +14,7 @@ export namespace Components {
         "mainText": string;
         "name": string;
         "required": boolean;
+        "state": string;
         "subText": string;
         "value": string;
     }
@@ -55,6 +56,7 @@ declare namespace LocalJSX {
         "onClick"?: (event: KekaCheckboxCustomEvent<void>) => void;
         "onFocus"?: (event: KekaCheckboxCustomEvent<void>) => void;
         "required"?: boolean;
+        "state"?: string;
         "subText"?: string;
         "value"?: string;
     }

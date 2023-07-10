@@ -18,6 +18,7 @@ export class KekaCheckbox {
 
   @Prop() name: string="";
   @Prop() value: string="";
+  @Prop() state:string="checked";
  
 
   @Event() change: EventEmitter<boolean>;
@@ -25,13 +26,11 @@ export class KekaCheckbox {
   @Event() focus: EventEmitter<void>;
   @Event() blur: EventEmitter<void>;
 
-  @State() state:string="checked";
 
   private checkbox!: HTMLInputElement;
   
   componentWillLoad(){
     if(this.indeterminate){
-      this.state="indeterminate"
       this.checked=false
     }
     if(this.checked && this.indeterminate){
