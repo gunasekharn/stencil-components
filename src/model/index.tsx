@@ -1,1 +1,1 @@
-export * from './user-data';
+export * from './users-data';
