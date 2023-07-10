@@ -41,7 +41,7 @@ export class AvatarStack {
         :
         index>=4 ? 
         <keka-avatar
-          number={this.value.length-4}
+          allUsers={this.value.slice(4,)}
           size={this.size} 
           shape={"rounded"} 
           user={item}

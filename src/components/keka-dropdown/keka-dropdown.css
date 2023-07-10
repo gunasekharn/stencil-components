@@ -94,7 +94,7 @@
   row-gap: 4px;
 }
 
-.dropdown-list {
+/* .dropdown-list {
   background-color: #9e77ed;
   width: 20px;
   height: 20px;
@@ -102,7 +102,7 @@
   padding: 4px;
   cursor: pointer;
   text-align: center;
-}
+} */
 
 .input-container,
 .input-container-filled {

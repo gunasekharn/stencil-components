@@ -144,7 +144,11 @@ export class KekaDropdown {
     return (
       <div class={this.type !== 'list' ? `dropdown-container` : 'dropdown-list-container'}>
         {this.type === 'list' && (
-          <div class={`dropdown-list`} onClick={() => this.toggleDropdown()}>
+          <div 
+          id="inputContainer"
+          aria-haspopup="true"
+          aria-expanded="false"
+          class={`dropdown-list`} onClick={() => this.toggleDropdown()}>
             {this.label}
           </div>
         )}

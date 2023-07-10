@@ -12,7 +12,7 @@ export class KekaDropdownItem {
 
   @Prop() label: string = 'Item';
 
-  @Prop() avatar: string = 'https://hr.keka.com/files/24040a7e-a7c5-47a5-9cd5-019962c66385/200x200/profileimage/b768a5c59fcf417e86b7f05cd5382b5b.png';
+  @Prop() avatar: string ;
 
   @Prop() showAvatar: boolean = false;
 
@@ -39,14 +39,15 @@ export class KekaDropdownItem {
   }
 
   componentWillLoad() {
-    console.log('host el: ', this.hostElement);
+    // console.log('host el: ', this.hostElement);
   }
-
+  
   componentDidLoad() {
     if (this.multiple) {
       this.checkboxEl = this.hostElement.shadowRoot.querySelector('input');
       this.checkboxEl.checked = this.checked;
     }
+    console.log("avatar: ", this.avatar)
   }
 
   render() {

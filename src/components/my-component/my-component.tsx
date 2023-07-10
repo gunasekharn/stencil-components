@@ -1,5 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../../utils/utils';
+import { Component,  h } from '@stencil/core';
+// import { format } from '../../utils/utils';
 import { Users } from '../../model';
 
 @Component({
@@ -10,57 +10,147 @@ import { Users } from '../../model';
 export class MyComponent {
   data:Users[] =[
     {
-        name: "nagateja pillarisetti",
+        name: "vijay simha reddy kamidi",
         email:"vijay@gmail.com",
         profile:'././assets/profilePicture.png',
         designation:"designer"
     },
     {
-        name: "nagateja pillarisetti",
+        name: "vijay simha ",
         email:"vijay@gmail.com",
         profile:'././assets/profilePicture.png',
         designation:"product engineer"
     },
     {
-        name: "nagateja pillarisetti",
+        name: "vijay simha reddy ",
         email:"vijay@gmail.com",
         profile:"././assets/profilePicture.png",
         designation:"frontend developer"
     },
     {
-        name: "nagateja pillarisetti ",
+        name: "vijay  ",
         email:"vijay@gmail.com",
         profile:"././assets/profilePicture.png",
         designation:"backend developer"
     },
     {
-        name: "nagateja pillarisetti",
+        name: "nagateja vijay simha reddy ",
         email:"vijay@gmail.com",
         profile:"././assets/profilePicture.png",
         designation:"app developer"
     },
     {
-        name: "nagateja pillarisetti",
+        name: "vijay simha reddy  isetti",
         email:"vijay@gmail.com",
         profile:"././assets/profilePicture.png",
         designation:"designer"
     },
     {
-        name: "nagateja pillarisetti",
+        name: "nagateja vijay arisetti",
         email:"vijay@gmail.com",
         profile:"././assets/profilePicture.png",
         designation:"head technology"
-    }
+    },
+    {
+      name: "vijay simha kingsman",
+      email:"vijay@gmail.com",
+      profile:'././assets/profilePicture.png',
+      designation:"product engineer"
+  },
+  // {
+  //     name: "vijay simha arisetti",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"frontend developer"
+  // },
+  // {
+  //     name: "kamidi vijay simha reddy  ",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"backend developer"
+  // },
+  // {
+  //     name: "nagateja setti",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"app developer"
+  // },
+  // {
+  //   name: "vijay simha reddy kamidi",
+  //   email:"vijay@gmail.com",
+  //   profile:'././assets/profilePicture.png',
+  //   designation:"designer"
+  // },
+  // {
+  //     name: "vijay simha ",
+  //     email:"vijay@gmail.com",
+  //     profile:'././assets/profilePicture.png',
+  //     designation:"product engineer"
+  // },
+  // {
+  //     name: "vijay simha reddy ",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"frontend developer"
+  // },
+  // {
+  //     name: "vijay  ",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"backend developer"
+  // },
+  // {
+  //     name: "nagateja vijay simha reddy ",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"app developer"
+  // },
+  // {
+  //     name: "vijay simha reddy  isetti",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"designer"
+  // },
+  // {
+  //     name: "nagateja vijay arisetti",
+  //     email:"vijay@gmail.com",
+  //     profile:"././assets/profilePicture.png",
+  //     designation:"head technology"
+  // },
+  // {
+  //   name: "vijay simha kingsman",
+  //   email:"vijay@gmail.com",
+  //   profile:'././assets/profilePicture.png',
+  //   designation:"product engineer"
+  // },
+  // {
+  //   name: "vijay simha arisetti",
+  //   email:"vijay@gmail.com",
+  //   profile:"././assets/profilePicture.png",
+  //   designation:"frontend developer"
+  // },
+  // {
+  //   name: "kamidi vijay simha reddy  ",
+  //   email:"vijay@gmail.com",
+  //   profile:"././assets/profilePicture.png",
+  //   designation:"backend developer"
+  // },
+  // {
+  //   name: "nagateja setti",
+  //   email:"vijay@gmail.com",
+  //   profile:"././assets/profilePicture.png",
+  //   designation:"app developer"
+  // }
     
   ];
   user1:Users={
-    name: "nagateja pillarisetti",
+    name: "nagateja pillar",
     email:"vijay@gmail.com",
     profile:"././assets/profilePicture.png",
     designation:"frontend dev"
   };
   user2:Users={
-    name: "nagateja pillarisetti",
+    name: "nagateja setti",
     email:"vijay@gmail.com",
     profile:"",
     designation:"designer"
@@ -76,9 +166,8 @@ export class MyComponent {
 
   render() {
 
-    return <div>Hello, World! I'm {this.getText()} from Abhishek branch</div>;
-
     return <div>
+      <h1>component/input</h1>
       <div class="d-flex">
               <professional-avatar size="avatar-xxxl " data={this.user1}></professional-avatar>
               <professional-avatar size="avatar-xxl " data={this.user1}></professional-avatar>
@@ -90,12 +179,12 @@ export class MyComponent {
             </div>
 
             <div>
-              <avatar-stack  size="avatar-xs" value={this.data}></avatar-stack>
+              {/* <avatar-stack  size="avatar-xs" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-sm" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-md" value={this.data}></avatar-stack>
               <avatar-stack  size="avatar-lg" value={this.data}></avatar-stack>
-              <avatar-stack  size="avatar-xl" value={this.data}></avatar-stack>
-              <avatar-stack  size="avatar-xxl" value={this.data}></avatar-stack>
+              <avatar-stack  size="avatar-xl" value={this.data}></avatar-stack>5
+              <avatar-stack  size="avatar-xxl" value={this.data}></avatar-stack> */}
               <avatar-stack  size="avatar-xxxl" value={this.data}></avatar-stack>
             </div>
 
@@ -187,6 +276,10 @@ export class MyComponent {
                 <progress-indicator fill={90} showLabel></progress-indicator>
                 <progress-indicator fill={100} showLabel></progress-indicator>
               </div>
+            </div>
+
+            <div>
+
             </div>
             
       </div>;
