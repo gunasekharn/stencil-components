@@ -167,7 +167,6 @@ export class MyComponent {
   render() {
 
     return <div>
-      <h1>component/input</h1>
       <div class="d-flex">
               <professional-avatar size="avatar-xxxl " data={this.user1}></professional-avatar>
               <professional-avatar size="avatar-xxl " data={this.user1}></professional-avatar>
@@ -248,9 +247,9 @@ export class MyComponent {
               <keka-avatar size="avatar-xs " shape="squared" user={this.user3}></keka-avatar>
             </div>
 
-            <div class={"d-flex"}>
+            <div class={"d-flexx"}>
 
-              <div class={" m-1"}>
+              <p>no label and no tooltip</p>
                 <progress-indicator fill={30}  ></progress-indicator>
                 <progress-indicator fill={20} ></progress-indicator>
                 {/* <progress-indicator fill={10} ></progress-indicator>
@@ -261,9 +260,10 @@ export class MyComponent {
                 <progress-indicator fill={70} ></progress-indicator>
                 <progress-indicator fill={80} ></progress-indicator>
                 <progress-indicator fill={90} ></progress-indicator>
-                <progress-indicator fill={100} ></progress-indicator> */}
-              </div>
-              <div class={" m-1"}>
+              <progress-indicator fill={100} ></progress-indicator> */}
+
+             
+              <p>label and no tooltip</p>
                 <progress-indicator fill={30}  showLabel></progress-indicator>
                 <progress-indicator fill={20} showLabel></progress-indicator>
                 {/* <progress-indicator fill={10} showLabel ></progress-indicator>
@@ -273,11 +273,11 @@ export class MyComponent {
                 <progress-indicator fill={60} showLabel></progress-indicator>
                 <progress-indicator fill={70} showLabel></progress-indicator>
                 <progress-indicator fill={80} showLabel></progress-indicator>
-                <progress-indicator fill={90} showLabel></progress-indicator>
-                <progress-indicator fill={100} showLabel></progress-indicator> */}
-              </div>
+                <progress-indicator fill={90showLabel-indicator>
 
-              <div class={" m-1"}>
+              <progress-indicator fill={100} showLabel></progress-indicator> */}
+              
+                <p> tooltip </p>
                 <progress-indicator fill={30} showLabel tooltip></progress-indicator>
                 <progress-indicator fill={20} tooltip></progress-indicator>
                 {/* <progress-indicator fill={10} tooltip></progress-indicator>
@@ -289,7 +289,7 @@ export class MyComponent {
                 <progress-indicator fill={80} tooltip></progress-indicator>
                 <progress-indicator fill={90} tooltip></progress-indicator>
                 <progress-indicator fill={100} tooltip></progress-indicator> */}
-              </div>
+              
             </div>
 
             <div class={"d-flex"}>

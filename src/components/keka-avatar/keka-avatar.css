@@ -14,7 +14,7 @@
   --violet:#8572a0;
   --white:#fff;
 
-
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: block;
 }
 p,h1,h2,h3,h4,h5,h6,ul,li{
@@ -81,8 +81,6 @@ img {
 .uppercase {
   text-transform: uppercase;
 }
-
-
 
 .letter-avatar.avatar-xxxl {
   font-size: 32px;
