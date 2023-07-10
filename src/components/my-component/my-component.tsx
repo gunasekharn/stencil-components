@@ -251,9 +251,9 @@ export class MyComponent {
             <div class={"d-flex"}>
 
               <div class={" m-1"}>
-                <progress-indicator fill={0}  ></progress-indicator>
-                <progress-indicator fill={10} ></progress-indicator>
+                <progress-indicator fill={30}  ></progress-indicator>
                 <progress-indicator fill={20} ></progress-indicator>
+                {/* <progress-indicator fill={10} ></progress-indicator>
                 <progress-indicator fill={30} ></progress-indicator>
                 <progress-indicator fill={40} ></progress-indicator>
                 <progress-indicator fill={50} ></progress-indicator>
@@ -261,12 +261,12 @@ export class MyComponent {
                 <progress-indicator fill={70} ></progress-indicator>
                 <progress-indicator fill={80} ></progress-indicator>
                 <progress-indicator fill={90} ></progress-indicator>
-                <progress-indicator fill={100} ></progress-indicator>
+                <progress-indicator fill={100} ></progress-indicator> */}
               </div>
               <div class={" m-1"}>
-                <progress-indicator fill={0}  showLabel></progress-indicator>
-                <progress-indicator fill={10} showLabel ></progress-indicator>
+                <progress-indicator fill={30}  showLabel></progress-indicator>
                 <progress-indicator fill={20} showLabel></progress-indicator>
+                {/* <progress-indicator fill={10} showLabel ></progress-indicator>
                 <progress-indicator fill={30} showLabel></progress-indicator>
                 <progress-indicator fill={40} showLabel></progress-indicator>
                 <progress-indicator fill={50} showLabel></progress-indicator>
@@ -274,7 +274,21 @@ export class MyComponent {
                 <progress-indicator fill={70} showLabel></progress-indicator>
                 <progress-indicator fill={80} showLabel></progress-indicator>
                 <progress-indicator fill={90} showLabel></progress-indicator>
-                <progress-indicator fill={100} showLabel></progress-indicator>
+                <progress-indicator fill={100} showLabel></progress-indicator> */}
+              </div>
+
+              <div class={" m-1"}>
+                <progress-indicator fill={30} showLabel tooltip></progress-indicator>
+                <progress-indicator fill={20} tooltip></progress-indicator>
+                {/* <progress-indicator fill={10} tooltip></progress-indicator>
+                <progress-indicator fill={30} tooltip></progress-indicator>
+                <progress-indicator fill={40} tooltip></progress-indicator>
+                <progress-indicator fill={50} tooltip></progress-indicator>
+                <progress-indicator fill={60} tooltip></progress-indicator>
+                <progress-indicator fill={70} tooltip></progress-indicator>
+                <progress-indicator fill={80} tooltip></progress-indicator>
+                <progress-indicator fill={90} tooltip></progress-indicator>
+                <progress-indicator fill={100} tooltip></progress-indicator> */}
               </div>
             </div>
 

@@ -77,6 +77,7 @@ export namespace Components {
     interface ProgressIndicator {
         "fill": number;
         "showLabel": boolean;
+        "tooltip": boolean;
     }
 }
 export interface KekaDropdownCustomEvent<T> extends CustomEvent<T> {
@@ -259,6 +260,7 @@ declare namespace LocalJSX {
     interface ProgressIndicator {
         "fill"?: number;
         "showLabel"?: boolean;
+        "tooltip"?: boolean;
     }
     interface IntrinsicElements {
         "avatar-stack": AvatarStack;
