@@ -1,8 +1,9 @@
 import { Component, Prop, h } from '@stencil/core';
+import { ProfessionalAvatar } from '../professional-avatar/professional-avatar';
 
 @Component({
   tag: 'progress-indicator',
-  styleUrl: 'progress-indicator.css',
+  styleUrl: 'progress-indicator.scss',
   shadow: true,
 })
 export class ProgressIndicator {
@@ -13,13 +14,13 @@ export class ProgressIndicator {
 
   
   componentWillRender(){
-    if(this.fill)
-    console.log("fill  :" , this.fill, this," label : ")
+    // if(this.fill)
+    // console.log("fill  :" , this.fill, this," label : ")
   }
 
   render() {
     return (
-      <div>
+      <div class={"avatar-container"}>
         {!this.tooltip ? 
         (
           <div class={"m-1"}>

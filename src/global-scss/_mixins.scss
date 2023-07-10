@@ -6,3 +6,7 @@
 @mixin displayFlex{
     display: flex;
 }
+@mixin displayAlignCenter{
+    display: flex;
+    align-items: center;
+}

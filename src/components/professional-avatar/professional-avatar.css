@@ -3,47 +3,34 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.d-flex {
+.avatar-container .d-flex {
   display: flex;
   align-items: center;
 }
-
-.capitalize {
+.avatar-container .capitalize {
   text-transform: capitalize;
 }
-
-p {
+.avatar-container p {
   margin: 0px;
 }
-
-.avatar-xl {
+.avatar-container .avatar-xl {
   font-size: 10px;
 }
-
-.font-size-xl {
+.avatar-container .font-size-xl {
   font-size: 16px;
 }
-
-.font-size-lg {
+.avatar-container .font-size-lg {
   font-size: 14px;
 }
-
-.font-size-md {
+.avatar-container .font-size-md {
   font-size: 14px;
 }
-
-.font-size-sm {
+.avatar-container .font-size-sm {
   font-size: 12px;
 }
-
-.font-size-xs {
+.avatar-container .font-size-xs {
   font-size: 10px;
 }
-
-.display-none {
-  display: none;
-}
-
-.px-1 {
+.avatar-container .px-1 {
   padding: 0px 5px;
 }/*# sourceMappingURL=professional-avatar.css.map */

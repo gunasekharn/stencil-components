@@ -84,13 +84,13 @@ export class MyComponent {
 
     return <div>
       <div class="d-flex">
-              <professional-avatar size="avatar-xxxl " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-xxl " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-xl " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-lg " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-md " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-sm " data={this.user1}></professional-avatar>
-              <professional-avatar size="avatar-xs " data={this.user1}></professional-avatar>
+              < keka-professional-avatar size="avatar-xxxl " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-xxl " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-xl " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-lg " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-md " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-sm " data={this.user1}></ keka-professional-avatar>
+              < keka-professional-avatar size="avatar-xs " data={this.user1}></ keka-professional-avatar>
             </div>
 
             <div>

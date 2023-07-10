@@ -1,48 +1,41 @@
+@import "../../global-scss/mixins";
 :host {
   display: block;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-.d-flex{
-  display: flex;
-  align-items: center;
-}
+$font-sizes: (
+  xl: 16px,
+  lg: 14px,
+  md: 14px,
+  sm: 12px,
+  xs: 10px,
+);
 
-.capitalize{
-  text-transform: capitalize;
-}
-p{
-  margin: 0px;
-}
+.avatar-container{
 
-.avatar-xl{
-  font-size: 10px;
-}
-
-.font-size-xl{
-  font-size: 16px;
-}
-
-.font-size-lg{
-  font-size: 14px;
-}
-
-.font-size-md{
-  font-size: 14px;
-}
-
-.font-size-sm{
-  font-size: 12px;
+  .d-flex{
+    @include displayAlignCenter
+  }
   
-}
-.font-size-xs{
-  font-size: 10px; 
-}
-
-.display-none{
-  display: none;
-}
-
-.px-1{
-  padding: 0px 5px;
+  .capitalize{
+    text-transform: capitalize;
+  }
+  p{
+    margin: 0px;
+  }
+  
+  .avatar-xl{
+    font-size: 10px;
+  }
+  
+  @each $size, $fontSize in $font-sizes {
+    .font-size-#{$size} {
+      font-size: $fontSize;
+    }
+  }
+  
+  .px-1{
+    padding: 0px 5px;
+  }
 }

@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 import { Users } from '../../model';
 
 @Component({
-  tag: 'professional-avatar',
+  tag: 'keka-professional-avatar',
   styleUrl: 'professional-avatar.scss',
   shadow: true,
 })
@@ -12,7 +12,7 @@ export class ProfessionalAvatar {
 
   render() {
     return (
-      <div class={"d-flex"}>
+      <div class={"d-flex avatar-container"}>
 
         <div>
           <keka-avatar 
