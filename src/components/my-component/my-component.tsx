@@ -195,7 +195,8 @@ export class MyComponent {
               
                 <p> tooltip </p>
                 <progress-indicator fill={30} showLabel tooltip></progress-indicator>
-                <progress-indicator fill={20} tooltip></progress-indicator>
+                <progress-indicator fill={20} showLabel tooltip></progress-indicator>
+                <progress-indicator fill={50} showLabel tooltip></progress-indicator>
                 {/* <progress-indicator fill={10} tooltip></progress-indicator>
                 <progress-indicator fill={30} tooltip></progress-indicator>
                 <progress-indicator fill={40} tooltip></progress-indicator>

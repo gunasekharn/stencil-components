@@ -2,7 +2,7 @@ import { Component, Prop,Host,Element, h } from '@stencil/core';
 
 @Component({
   tag: 'keka-tooltip',
-  styleUrl: 'keka-tooltip.css',
+  styleUrl: 'keka-tooltip.scss',
   shadow: true,
 })
 export class KekaTooltip {

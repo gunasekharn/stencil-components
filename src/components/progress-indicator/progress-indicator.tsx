@@ -1,5 +1,4 @@
 import { Component, Prop, h } from '@stencil/core';
-import { ProfessionalAvatar } from '../professional-avatar/professional-avatar';
 
 @Component({
   tag: 'progress-indicator',
