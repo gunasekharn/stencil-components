@@ -170,7 +170,7 @@ export class KekaDropdown {
                       this.selectedItems.map(item => {
                         return (
                           <div class={`chip-wrapper d-flex justify-content-center align-items-center`}>
-                            {this.avatars && item.avatar && (
+                            {this.avatars && item.avatar != '' && (
                               <span class={`d-flex align-items-center`}>
                                 <img class={`avatar`} width={`12`} src={item.avatar} alt="avatar" />
                               </span>
@@ -232,6 +232,7 @@ export class KekaDropdown {
                     checked={item.checked as boolean}
                     multiple={this.multiple}
                     show-avatar={this.avatars}
+                    avatar={item.avatar as string}
                     parent-ref={this.label}
                     type={this.type}
                   ></keka-dropdown-item>

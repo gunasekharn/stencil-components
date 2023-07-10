@@ -41,7 +41,7 @@ export class KekaAvatar {
           class={` uppercase ${this.letterAvatarClass}  ${this.size} ${this.shape} ${this.class}`} avatars>
             {this.allUsers.length>0 && this.allUsers.map((item)=>{
                 return (
-                  <keka-dropdown-item type='list' show-avatar label={(item.name as string)} avatar={item.profile }></keka-dropdown-item>
+                  <keka-dropdown-item type='list' show-avatar label={item.name} avatar={item.profile}></keka-dropdown-item>
                 );
               })
             }
