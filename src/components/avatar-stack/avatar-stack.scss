@@ -1,17 +1,17 @@
+@import "../../global-scss/mixins";
 :host {
   display: block;
 }
 
-img {
+img{
   margin: 10% 0px;
   border-radius: 50%;
   border: 2% solid white;
 }
 
-.d-flex {
-  display: flex;
+.d-flex{
+  @include displayFlex;
 }
-
-.hide {
+.hide{
   display: none;
-}/*# sourceMappingURL=avatar-stack.css.map */
+}

@@ -1,0 +1,8 @@
+@mixin displayContentCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin displayFlex{
+    display: flex;
+}

@@ -1,131 +1,106 @@
+/* sizes */
+/* bg */
 :host {
-  /* sizes */
-
-  --xs:16px;
-  --sm:24px;
-  --md:32px;
-  --lg:40px;
-  --xl:48px;
-  --xxl:56px;
-  --xxxl:64px;
-
-  /* bg */
-  --brand-50:#F9F5FF;
-  --violet:#8572a0;
-  --white:#fff;
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: block;
 }
-p,h1,h2,h3,h4,h5,h6,ul,li{
+
+p, h1, h2, h3, h4, h5, h6, ul, li {
   margin: 0px;
   padding: 0px;
 }
 
-img {
-  margin: 10% 0px;
-  border: 1px solid var(--white);
+.keka-avatar {
+  display: inline;
 }
-
-.rounded {
+.keka-avatar .rounded {
   border-radius: 50%;
 }
-
-.squared {
+.keka-avatar .squared {
   border-radius: 5%;
 }
-
-.avatar-xxxl {
-  width:var(--xxxl);
+.keka-avatar .avatar-xxxl {
+  width: 64px;
 }
-
-.avatar-xxl {
-  width: var(--xxl);
+.keka-avatar .avatar-xxl {
+  width: 56px;
 }
-
-.avatar-xl {
-  width: var(--xl);
+.keka-avatar .avatar-xl {
+  width: 48px;
 }
-
-.avatar-lg {
-  width: var(--lg);
+.keka-avatar .avatar-lg {
+  width: 40px;
 }
-
-.avatar-md {
-  width: var(--md);
+.keka-avatar .avatar-md {
+  width: 32px;
 }
-
-.avatar-sm {
-  width: var(--sm);
+.keka-avatar .avatar-sm {
+  width: 24px;
 }
-
-.avatar-xs {
-  width: var(--xs);
+.keka-avatar .avatar-xs {
+  width: 16px;
+}
+.keka-avatar .letter-avatar.avatar-xxxl {
+  font-size: 32px;
+}
+.keka-avatar .letter-avatar.avatar-xxl {
+  font-size: 26px;
+}
+.keka-avatar .letter-avatar.avatar-xl {
+  font-size: 22px;
+}
+.keka-avatar .letter-avatar.avatar-lg {
+  font-size: 18px;
+}
+.keka-avatar .letter-avatar.avatar-md {
+  font-size: 14px;
+}
+.keka-avatar .letter-avatar.avatar-sm {
+  font-size: 12px;
+}
+.keka-avatar .letter-avatar.avatar-xs {
+  font-size: 8px;
+}
+.keka-avatar .avatar-stack-m-1 {
+  margin-left: -30%;
+}
+.keka-avatar .avatar-stack-m-2 {
+  margin-left: -50%;
+}
+.keka-avatar .avatar-stack-m-3 {
+  margin-left: -70%;
+}
+.keka-avatar .avatar-stack-m-4 {
+  margin-left: -100%;
+}
+.keka-avatar img {
+  margin: 10% 0px;
+  border: 1px solid #fff;
 }
 
 .user-icon {
-  background-color:var(--brand-50);
-  color: var(--violet);
+  background-color: #F9F5FF;
+  color: #8572a0;
 }
 
 .letter-avatar {
-  margin:15% 0%;
+  margin: 15% 0%;
   text-align: center;
-  background-color: var(--brand-50);
+  background-color: #F9F5FF;
   padding: 18% 0%;
-  color: var(--violet);
+  color: #8572a0;
   font-weight: 600;
-  border: 1px solid var(--white);
+  border: 1px solid #fff;
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 
-.letter-avatar.avatar-xxxl {
-  font-size: 32px;
-}
-.letter-avatar.avatar-xxl {
-  font-size: 26px;
-}
-.letter-avatar.avatar-xl {
-  font-size: 22px;
-}
-.letter-avatar.avatar-lg {
-  font-size: 18px;
-}
-.letter-avatar.avatar-md {
-  font-size: 14px;
-}
-.letter-avatar.avatar-sm {
-  font-size: 12px;
-}
-.letter-avatar.avatar-xs {
-  font-size: 8px;
-}
-
-.avatar-stack-m-1{
-  margin-left: -30%;
-}
-.avatar-stack-m-2{
-  margin-left: -50%;
-}
-.avatar-stack-m-3{
-  margin-left: -70%;
-}
-.avatar-stack-m-4{
-  margin-left: -100%;
-}
-
-.display-inline {
-  display: inline;
-}
-
 .display-none {
   display: none;
 }
 
-.ki.avatar{
-  padding:15% 1%;
-}
-
+.ki.avatar {
+  padding: 15% 1%;
+}/*# sourceMappingURL=keka-avatar.css.map */

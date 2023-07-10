@@ -1,0 +1,117 @@
+/* sizes */
+$xs: 16px;
+$sm: 24px;
+$md: 32px;
+$lg: 40px;
+$xl: 48px;
+$xxl: 56px;
+$xxxl: 64px;
+
+/* bg */
+$brand-50: #F9F5FF;
+$violet: #8572a0;
+$white: #fff;
+
+//map
+
+$avatar-sizes: (
+  xxxl: $xxxl,
+  xxl: $xxl,
+  xl: $xl,
+  lg: $lg,
+  md: $md,
+  sm: $sm,
+  xs: $xs
+);
+
+$avatar-font-sizes: (
+  xxxl: 32px,
+  xxl: 26px,
+  xl: 22px,
+  lg: 18px,
+  md: 14px,
+  sm: 12px,
+  xs: 8px
+);
+
+
+$avatar-stack-margins: (
+  1: -30%,
+  2: -50%,
+  3: -70%,
+  4: -100%
+);
+
+:host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+.keka-avatar{
+  display: inline;
+  .rounded {
+    border-radius: 50%;
+  }
+  
+  .squared {
+    border-radius: 5%;
+  }
+  @each $size, $width in $avatar-sizes {
+    .avatar-#{$size} {
+      width: $width;
+    }
+  }
+
+  @each $size, $fontSize in $avatar-font-sizes {
+    .letter-avatar.avatar-#{$size} {
+      font-size: $fontSize;
+    }
+  }
+  @each $marginIndex, $marginLeft in $avatar-stack-margins {
+    .avatar-stack-m-#{$marginIndex} {
+      margin-left: $marginLeft;
+    }
+  }
+
+  img {
+    margin: 10% 0px;
+    border: 1px solid $white;
+  }
+  
+  
+}
+
+.user-icon {
+  background-color: $brand-50;
+  color: $violet;
+}
+
+.letter-avatar {
+  margin: 15% 0%;
+  text-align: center;
+  background-color: $brand-50;
+  padding: 18% 0%;
+  color: $violet;
+  font-weight: 600;
+  border: 1px solid $white;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+
+// .display-inline {
+//   display: inline;
+// }
+
+.display-none {
+  display: none;
+}
+
+.ki.avatar {
+  padding: 15% 1%;
+}

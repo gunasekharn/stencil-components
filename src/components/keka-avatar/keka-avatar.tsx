@@ -16,7 +16,6 @@ export class KekaAvatar {
 
   iconClass: string = "user-icon";
   letterAvatarClass: string = "letter-avatar";
-  allAvatars: string = "allAvatars"
   name: string[] = [];
   initials: string = "";
 
@@ -33,10 +32,10 @@ export class KekaAvatar {
     })
 
     return (
-      <div class="ml-md">
+      <div class="ml-md keka-avatar">
         { 
         this.allUsers.length>0  ?
-         <div class={`display-inline`} >
+         <div class={""} >
           <keka-dropdown type="list" alignment="start" label={"+" + this.allUsers.length} 
           class={` uppercase ${this.letterAvatarClass}  ${this.size} ${this.shape} ${this.class}`} avatars>
             {this.allUsers.length>0 && this.allUsers.map((item)=>{
@@ -51,7 +50,7 @@ export class KekaAvatar {
         this.user.profile ?
           <img 
               src={this.user.profile} 
-              class={` display-inline ${this.size} ${this.shape} ${this.class}  `}
+              class={`  ${this.size} ${this.shape} ${this.class}  `}
               title={this.user.name}  
               alt="Default Profile" 
               aria-label={this.user.name + " profile picutre"}
@@ -59,7 +58,7 @@ export class KekaAvatar {
           :
           
           this.user.name ?
-          <div class={`display-inline`}>
+          <div class={``}>
             <p class={` uppercase ${this.letterAvatarClass}  ${this.size} ${this.shape} ${this.class}`}
                title={this.user.name}
                aria-label={this.user.name + " profile"}
@@ -67,7 +66,7 @@ export class KekaAvatar {
           </div>
           :
           
-          <div class={`display-inline`}>
+          <div class={``}>
             <svg xmlns="http://www.w3.org/2000/svg" 
             
             width={this.size.trim()=="avatar-xxxl"? 50 :this.size.trim()=="avatar-xxl"? 40 :this.size.trim()=="avatar-xl"? 30 : this.size.trim()=="avatar-lg"? 24:this.size.trim()=="avatar-md"? 18:this.size.trim()=="avatar-sm"? 14: 8} 

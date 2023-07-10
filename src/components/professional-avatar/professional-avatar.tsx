@@ -3,7 +3,7 @@ import { Users } from '../../model';
 
 @Component({
   tag: 'professional-avatar',
-  styleUrl: 'professional-avatar.css',
+  styleUrl: 'professional-avatar.scss',
   shadow: true,
 })
 export class ProfessionalAvatar {

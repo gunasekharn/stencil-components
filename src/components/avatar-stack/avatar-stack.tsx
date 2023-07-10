@@ -3,7 +3,7 @@ import { Users } from '../../model';
 
 @Component({
   tag: 'avatar-stack',
-  styleUrl: 'avatar-stack.css',
+  styleUrl: 'avatar-stack.scss',
   shadow: true,
 })
 export class AvatarStack {
@@ -21,11 +21,10 @@ export class AvatarStack {
   @Prop() size:"avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl"= "avatar-lg";
   render() {
     return (
-      <div class="ml-md d-flex">
+    <div class="ml-md d-flex">
       {this.value && this.value.map((item , index) => (
         index<4? 
         <keka-avatar 
-          
           size={this.size} 
           shape={"rounded"} 
           user={item}
@@ -46,7 +45,7 @@ export class AvatarStack {
         ""
         ))
       }
-   </div>
+    </div>
     );
   }
 

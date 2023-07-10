@@ -208,12 +208,15 @@ export class MyComponent {
               
             </div>
 
-            <div class={"d-flex"}>
+            <div >
               <keka-input ></keka-input>
+              <keka-input  disable></keka-input>
               <keka-input size="sm" ></keka-input>              
+              <keka-input size="sm" variant="secondary" disable></keka-input>              
             </div>
             <div class={"d-flex"}>
               <keka-input variant="secondary"></keka-input>
+              <keka-input variant="secondary" disable></keka-input>
               <keka-input size="sm" variant="secondary"></keka-input>
             </div>
             
