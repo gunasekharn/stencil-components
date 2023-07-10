@@ -52,17 +52,6 @@ export class ProgressIndicator {
         )
         }
       </div>
-      // <div class={"d-flex m-1"}>
-      //       <keka-tooltip text={this.fill+"%"} position="top" theme='light' left={this.fill} >
-      //         <div class={"rounded-edge"}>  
-      //             <div 
-      //               class={`w-${this.fill} progress-bar`}
-      //               aria-label="progress indicator">
-      //             </div>
-      //         </div>
-      //       </keka-tooltip>
-      //       <div class={this.showLabel? "": "display-none"}>{this.fill}%</div>
-      //   </div>
     );
   }
 

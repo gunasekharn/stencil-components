@@ -87,10 +87,3 @@ export class KekaAvatar {
   }
 
 }
-
-
-// <keka-dropdown type="list" alignment="end" label="+3" avatars>
-// <keka-dropdown-item label="Item 1" />
-// <keka-dropdown-item label="Item 2" />
-// <keka-dropdown-item label="Item 3" />
-// </keka-dropdown>

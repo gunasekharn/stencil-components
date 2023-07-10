@@ -11,12 +11,11 @@ export class AvatarStack {
   @Element() element: HTMLElement;
 
   componentDidLoad() {
-    // Access the element and modify its properties or attach event listeners
     this.element.addEventListener('click', this.handleClick);
   }
 
   handleClick() {
-    console.log('Element clicked!');
+    // console.log('Element clicked!');
   }
   @Prop() value:Users[]=[];
   @Prop() size:"avatar-xs"|"avatar-sm"|"avatar-md"|"avatar-lg"|"avatar-xl"|"avatar-xxl"|"avatar-xxxl"= "avatar-lg";
@@ -24,11 +23,6 @@ export class AvatarStack {
     return (
       <div class="ml-md d-flex">
       {this.value && this.value.map((item , index) => (
-        //  <img 
-        //     src={item.profile} 
-        //     class={index===0 ?  this.size : index<4 ?`position-left-${index} ` +this.size : " hide "    }  
-        //     title={item.name} 
-        //     alt=""  />
         index<4? 
         <keka-avatar 
           

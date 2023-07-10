@@ -77,14 +77,10 @@ input[type="text" i] {
   box-shadow: 0px 0px 0px 3px #F4EBFF;
 }
 
-/* .input-container-secondary:focus {
-  border: 1.5px solid #D92D20;
-  box-shadow: none;
-} */
+
 
 .input-container-secondary:hover {
   border: 1px solid #FDA29B;
-  /* background-color: #d29d99; */
   box-shadow: 0px 0px 0px 3px #FEE4E2;
 }
 

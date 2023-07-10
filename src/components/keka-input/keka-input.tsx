@@ -42,7 +42,6 @@ export class KekaInput {
     this.click.emit();
   };
   handelFocus = () => {
-    // this.isSearchActive=true;
     this.focus.emit();
   };
   handelBlur = () => {
@@ -59,7 +58,7 @@ export class KekaInput {
 
   onSearch=()=>{
     this.enter.emit({ value: this.value });
-    console.log('Search triggered');
+    // console.log('Search triggered');
   }
 
   render() {
@@ -108,10 +107,4 @@ export class KekaInput {
   }
 
 }
- {/* <div class="dropdown">
-            <select  >
-              {this.inputData.map((option, index) => (
-                <option value={option.name} key={index}>{option.name}</option>
-              ))}
-            </select>
-          </div> */}
+ 
