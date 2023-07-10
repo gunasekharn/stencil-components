@@ -1,5 +1,5 @@
-import { Component ,Prop, h } from '@stencil/core';
-import { Users } from '../../model';
+import { Component ,Prop,State, h } from '@stencil/core';
+import { Users  } from '../../model';
 
 @Component({
   tag: 'keka-avatar',
@@ -12,16 +12,18 @@ export class KekaAvatar {
   @Prop() shape: string;
   @Prop() user: Users;
   @Prop() class: string;
-  @Prop() number: number;
+  @Prop() allUsers: Users[]=[];
 
   iconClass: string = "user-icon";
   letterAvatarClass: string = "letter-avatar";
   allAvatars: string = "allAvatars"
   name: string[] = [];
   initials: string = "";
+
+  @State() showOtherProfiles:boolean= false;
   
   callfun(){
-    console.log("clicked")
+    this.showOtherProfiles=!this.showOtherProfiles;
   }
   render() {
 
@@ -32,10 +34,18 @@ export class KekaAvatar {
 
     return (
       <div class="ml-md">
-        {this.number ?
-         <div class={`display-inline`} onClick={()=>this.callfun()}>
-          <p class={` uppercase ${this.letterAvatarClass}  ${this.size} ${this.shape} ${this.class}`}
-              >+{this.number}</p>
+        { 
+        this.allUsers.length>0  ?
+         <div class={`display-inline`} >
+          <keka-dropdown type="list" alignment="start" label={"+" + this.allUsers.length} 
+          class={` uppercase ${this.letterAvatarClass}  ${this.size} ${this.shape} ${this.class}`} avatars>
+            {this.allUsers.length>0 && this.allUsers.map((item)=>{
+                return (
+                  <keka-dropdown-item type='list' show-avatar label={item.name} avatar={item.profile}></keka-dropdown-item>
+                );
+              })
+            }
+          </keka-dropdown>
         </div>
         :
         this.user.profile ?
@@ -77,3 +87,10 @@ export class KekaAvatar {
   }
 
 }
+
+
+// <keka-dropdown type="list" alignment="end" label="+3" avatars>
+// <keka-dropdown-item label="Item 1" />
+// <keka-dropdown-item label="Item 2" />
+// <keka-dropdown-item label="Item 3" />
+// </keka-dropdown>
